@@ -1,0 +1,16 @@
+{
+	"Version": "2012-10-17"
+	"Statement": [
+		{
+			"sid": "PublicREadForGetBucketObjects",
+			"Effect": "Allow",
+			"Principal": "*",
+			"Action": [
+				"s3:GetObject"
+			],
+			"Resource": [
+				"arn:awaws:s3:::dranishnikov-rainforest-sky-website-project"
+			]
+		}
+	]
+}
