@@ -8,7 +8,7 @@
 			.then(response => response.json())
 			.then((response) => {
 				console.log(response);
-				document.getElementById("myDiv").innerHTML = response;
+				document.getElementById("myDiv").innerHTML = response.body;
 			});
 		}
 	</script>
