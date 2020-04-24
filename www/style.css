@@ -35,6 +35,7 @@
 
 .navbar a.right
 {
+	color: red;
 	float: right; /* TODO test */
 }
 

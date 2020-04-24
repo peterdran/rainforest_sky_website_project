@@ -1,0 +1,60 @@
+<html>
+	<head>
+	<!-->
+		<script>
+			async function callAwsLambdaFunction() {
+				fetch( 'https://ymrj2kq5ue.execute-api.us-east-1.amazonaws.com/TuTprod', {
+					method: 'GET'
+				})
+				.then(response => response.json())
+				.then((response) => {
+					console.log(response);
+					document.getElementById("myDiv").innerHTML = response.body;
+				});
+			}
+		</script>
+	</!-->
+		<title>FPU RF Committee</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-with, initial-scale=1">
+		<link rel="stylesheet" href="style.css">
+		<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Florida Polytechnic University IEEE RF Committee</h1>
+		</div>
+		
+		<div class="navbar">
+			<a href="rfcommittee.html">RF Committee</a>
+			<a href="transport_game.html">Web transportation game?</a>
+			<a href="about.html">About</a>
+			<a class=right href="index.html">Return Home</a>
+		</div>
+		
+		<div class="main">
+			<h1>Welcome!</h1>
+			<p>Picture goes here</p>
+			<h2>Interim Chair</h2>
+			<p>stuff about RF Committee</p>
+			<bold><a href="https://www.qrz.com/db/W4FPU">Visit us on QRZ</a></bold>
+			<bold><a href="http://sdr.n4but.com/">Orlando SDR by N4BUT</a></bold>
+			<img src="" alt="old meeting poster"></img>
+			<img src="" alt="&quot;new&quot; meeting poster"></img>
+			<!-->
+			<p><div id="myDiv"></div></p>
+			<button id="lambdaReq" onclick="callAwsLambdaFunction()">Sample Button: Press for bottom text pasta</button>
+			</!-->
+		</div>
+		
+		<div class="footer">
+			<h2>Sample Dranishnikov Footer</h2>
+			<p>About</p>
+			<p>(c) 2020 All wrongs reserved, all rights purged</p>
+		</div>
+	</body>
+</html>
