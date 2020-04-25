@@ -1,18 +1,6 @@
 <html>
 <head>
-	<script>
-		async function submitSubscriptionForm() {
-			fetch( 'https://ymrj2kq5ue.execute-api.us-east-1.amazonaws.com/TuTprod', {
-				method: 'GET'
-			})
-			.then(response => response.json())
-			.then((response) => {
-				console.log(response);
-				document.getElementById("myDiv").innerHTML = response.body;
-			}); //todo redo this part
-		}
-	</script>
-	
+	<script src="aws_rfmail_api_client.js"></script>
 	<title>FPU RF Committee</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-with, initial-scale=1">
@@ -75,6 +63,7 @@
 			</div>
 			<br>
 			<button id="submit_form" onClick="submitSubscriptionForm()">Subscribe</button>
+			<button id="unsub_form" onClick="requestUnsubscribe()">Unsubscribe</button>
 		</div>
 		<br>
 		<h2>Alumni:</h2>
