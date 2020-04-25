@@ -10,7 +10,7 @@ rainforest_sky_website_project
 The API provides a basic subscription management service to all users. 
 The two actions implemented are Subscribe and Unsubscribe. 
 Implemented in Node.js and hosted on AWS Lambda, 
-the Lambda functions (named SubscribedHandler and UnsubscribeHandler) add and delete from a DynamoDB NoSQL database, 
+the Lambda functions (named SubscribedHandler and UnsubscribeHandler respectively) add and delete from a DynamoDB NoSQL database, 
 storing the subscription list to be used for a mailing list. 
 
 API endpoint: https://cn63ilq03b.execute-api.us-east-1.amazonaws.com/RFcommMailProd/
@@ -20,9 +20,9 @@ S3 endpoint: http://dranishnikov-rainforest-sky-website-project.s3.amazonaws.com
 An API client is implemented at the RF Committee subpage, near the footer. 
 
 ### Action: Subscribe
-#### Method: POST
-#### Input content type: application/json
-#### Returns: HTTP 200, JSON with a "Subscribed" body message, null on all other conditions
+##### Method: POST
+##### Input content type: application/json
+##### Returns: HTTP 200, JSON with a "Subscribed" body message, null on all other conditions
 
 This action subscribes the user to the mailing list. An email is required. 
 The discord field is optional. 
@@ -32,7 +32,7 @@ Request body:
 ```json
 {
 	"email": "example1@example.com"
-	"discord_uname: 
+	"discord_uname": "optional#1234"
 }
 ```
 Response: 
@@ -47,9 +47,9 @@ Response:
 ```
 
 ### Action: Unsubscribe
-#### Method: DELETE
-#### Input content type: application/json
-#### Returns: HTTP 200, JSON with a "Unsubscribed" body message, null on all other conditions
+##### Method: DELETE
+##### Input content type: application/json
+##### Returns: HTTP 200, JSON with a "Unsubscribed" body message, null on all other conditions
 
 This action unsubscribes the user from the mailing list. An email is required. 
 The discord field is ignored. 
@@ -74,4 +74,4 @@ Response:
 ```
 
 ## Caveats: 
-Any failures in the backend fail silently. 
+Any failures in the backend fail silently. I am unable to access CloudWatch, so you'll have to live with it. Sorry. 
