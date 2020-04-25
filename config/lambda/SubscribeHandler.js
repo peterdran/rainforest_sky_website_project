@@ -5,7 +5,11 @@ exports.handler = async (event, context, callback) => {
     //Don't do this in PROD?
     
     var email = event.email;
-    var discord = event.discord_uname;
+    var discord =null;
+    if(event.discord_uname)
+    {
+        var discord = event.discord_uname;
+    }
     
     await createSub(email, discord).then(() => {
         callback(null, {
