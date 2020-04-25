@@ -1,3 +1,8 @@
+body 
+{
+		font-family: Arial, Helvetica, sans-serif;
+}
+
 .header 
 {
 	padding: 10px; /* stuff */
@@ -29,14 +34,13 @@
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 14px 20px; /* TODO test padding */
+	padding: 14px 20px;
 	text-decoration: none;
 }
 
 .navbar a.right
 {
-	color: red;
-	float: right; /* TODO test */
+	float: right;
 }
 
 
@@ -57,6 +61,7 @@
 	flex: 75%;
 	background-color: white;
 	padding: 11px;
+	max-width: 100%;
 }
 
 .main h1
@@ -64,14 +69,11 @@
 	padding: 20px;
 }
 
-.main myDiv
+.main object
 {
-	/*TODO figure out how to style response */
-}
-
-.btn lambdaReq
-{
-	/*TODO figure out how to style button */
+	min-width: 100%;
+	min-height: 600px;
+	max-height: 100%;
 }
 
 @media screen and (max-width: 700px)
@@ -94,7 +96,7 @@
 .footer 
 {
 	padding: 20px;
-	text-align: center; /* fix to be like company footer pages, probably a table? */
+	text-align: center;
 	background: #ddd;
 }
 	

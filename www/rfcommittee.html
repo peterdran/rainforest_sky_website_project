@@ -1,60 +1,97 @@
 <html>
-	<head>
-	<!-->
-		<script>
-			async function callAwsLambdaFunction() {
-				fetch( 'https://ymrj2kq5ue.execute-api.us-east-1.amazonaws.com/TuTprod', {
-					method: 'GET'
-				})
-				.then(response => response.json())
-				.then((response) => {
-					console.log(response);
-					document.getElementById("myDiv").innerHTML = response.body;
-				});
-			}
-		</script>
-	</!-->
-		<title>FPU RF Committee</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-with, initial-scale=1">
-		<link rel="stylesheet" href="style.css">
-		<style>
-		body {
-			font-family: Arial, Helvetica, sans-serif;
+<head>
+	<script>
+		async function submitSubscriptionForm() {
+			fetch( 'https://ymrj2kq5ue.execute-api.us-east-1.amazonaws.com/TuTprod', {
+				method: 'GET'
+			})
+			.then(response => response.json())
+			.then((response) => {
+				console.log(response);
+				document.getElementById("myDiv").innerHTML = response.body;
+			}); //todo redo this part
 		}
-		</style>
-	</head>
-	<body>
-		<div class="header">
-			<h1>Florida Polytechnic University IEEE RF Committee</h1>
-		</div>
+	</script>
+	
+	<title>FPU RF Committee</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-with, initial-scale=1">
+	<link rel="stylesheet" href="style_rf.css">
+</head>
+<body>
+	<div class="header">
+		<h1>Florida Poly's IEEE RF Committee</h1>
+	</div>
+	
+	<div class="navbar">
+		<a href="rfcommittee.html">RF Committee</a>
+		<a href="transport_game.html">Web transportation game?</a>
+		<a href="about.html">About</a>
+		<a class=right href="index.html">Return Home</a>
+	</div>
+	
+	<div class="main">
+		<h1>Welcome!</h1>
+		<p>
+			<h2>(Interim) Chair: Peter A. Dranishnikov</h2>
+			KN4YUE
+		<br>
+		<h2>Vice Chair: Now recruiting for Fall 2020 and beyond!</h2>
+		<br>
+		Licensees preferred, but not required. Training included in meetings.
+		<br>
+			<h2>Secretary: Yezabel Ruiz</h2>
+			KN4YUF
+		</p>
 		
-		<div class="navbar">
-			<a href="rfcommittee.html">RF Committee</a>
-			<a href="transport_game.html">Web transportation game?</a>
-			<a href="about.html">About</a>
-			<a class=right href="index.html">Return Home</a>
+		<p class="description">Hands-on demos, outdoor field days, and more</p>
+		<div class="main_links">
+		<p>
+			On the air as W4FPU. 
+			<a href="https://www.qrz.com/db/W4FPU">Visit our logbook on QRZ</a>
+		</p>
+		<p>
+			<a href="http://sdr.n4but.com/">SDR down the I4 road in Orlando by N4BUT</a>
+		</p>
 		</div>
+		<img src="img/RF%20Committee%20Poster%20plain_lowres.png" alt="old meeting poster"></img>
+		<img src="img/RF%20Poster%20k20v2%20plain_lowres.png" alt="actual new meeting poster"></img>
+		<img src="img/RF%20Committee%20Poster%201989%20plain_lowres.png" alt="&quot;new&quot; meeting poster"></img>
+		<p>Outdoor meeting location:</p>
+		<img src="img/ist_field.jpeg" alt="Field between IST and Dorms"></img>
+
+		<div class="">
+			<p>
+			Sign up for our mailing list: 
+			</p>
+			<div class="email_input">
+				<label for="email">E-mail:</label><br>
+				<input type="text" id="email" name="email">
+				</p>
+			</div>
+			<div class="discord_username">
+				<label for="disc_usr">Discord username (include part after #) [optional]:</label><br>
+				<input type="text" id="disc_usr" name="disc_usr">
+			</div>
+			<br>
+			<button id="submit_form" onClick="submitSubscriptionForm()">Subscribe</button>
+		</div>
+		<br>
+		<h2>Alumni:</h2>
+		<p>
+			<h3>Vladislav Fomitchev</h3>
+			KX4TH
+			<br>
+			<h3>Moshe Acevedo</h3>
+			KN4YUG
+		</p>
 		
-		<div class="main">
-			<h1>Welcome!</h1>
-			<p>Picture goes here</p>
-			<h2>Interim Chair</h2>
-			<p>stuff about RF Committee</p>
-			<bold><a href="https://www.qrz.com/db/W4FPU">Visit us on QRZ</a></bold>
-			<bold><a href="http://sdr.n4but.com/">Orlando SDR by N4BUT</a></bold>
-			<img src="" alt="old meeting poster"></img>
-			<img src="" alt="&quot;new&quot; meeting poster"></img>
-			<!-->
-			<p><div id="myDiv"></div></p>
-			<button id="lambdaReq" onclick="callAwsLambdaFunction()">Sample Button: Press for bottom text pasta</button>
-			</!-->
-		</div>
-		
-		<div class="footer">
-			<h2>Sample Dranishnikov Footer</h2>
-			<p>About</p>
-			<p>(c) 2020 All wrongs reserved, all rights purged</p>
-		</div>
-	</body>
+	</div>
+	
+	<div class="footer">
+		<h2>Sample Dranishnikov Footer</h2>
+		<p>About</p>
+		<p>(c) 2020 All wrongs reserved, all rights purged</p>
+	</div>
+</body>
 </html>
