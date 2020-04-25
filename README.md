@@ -39,7 +39,7 @@ Response:
 ```json
 {
   "statusCode": 200,
-  "body": "Unsubscribed!",
+  "body": "Subscribed!",
   "headers": {
     "Access-Control-Allow-Origin": "*"
   }
