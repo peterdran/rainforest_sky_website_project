@@ -16,9 +16,10 @@ async function callAwsLambdaFunction()
 async function submitSubscriptionForm()
 {
 	var formData = {
-		email: document.getElementById('email'),
-		discord_uname: document.getElementById("disc_usr")
+		email: document.getElementById('email').value,
+		discord_uname: document.getElementById("disc_usr").value
 	}
+	console.log(formData);
 	fetch( 'https://cn63ilq03b.execute-api.us-east-1.amazonaws.com/RFcommMailProd',
 	{
 		method: 'POST',
@@ -27,15 +28,16 @@ async function submitSubscriptionForm()
 			'Content-Type': 'application/json'
 		}
 	}).then(response => response.json())
-	.then(response => console.log(res));
+	.then(response => console.log(response));
 }
 
 async function requestUnsubscribe()
 {
 	var formData = {
-		email: document.getElementById("email"),
-		discord_uname: document.getElementById("disc_usr")
+		email: document.getElementById("email").value,
+		discord_uname: document.getElementById("disc_usr").value
 	}
+	console.log(formData);
 	fetch( 'https://cn63ilq03b.execute-api.us-east-1.amazonaws.com/RFcommMailProd',
 	{
 		method: 'DELETE',
@@ -44,6 +46,6 @@ async function requestUnsubscribe()
 			'Content-Type': 'application/json'
 		}
 	}).then(response => response.json())
-	.then(response => console.log(res));
+	.then(response => console.log(response));
 }
 

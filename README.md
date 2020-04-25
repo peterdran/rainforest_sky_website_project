@@ -3,9 +3,8 @@ AWS Cloud Final Project for CTS2375 Spring 2020
 
 API documentation:
 
-something does somthing other sonnosnaonso
+Mailing list stuff
 
-DEV STUFF REMOVE ON PROD
 
 API endpoint: https://cn63ilq03b.execute-api.us-east-1.amazonaws.com/RFcommMailProd
 
