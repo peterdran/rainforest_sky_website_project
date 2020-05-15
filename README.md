@@ -5,6 +5,9 @@ rainforest_sky_website_project
 
 #### RF Images: Florida Polytechnic University IEEE RF Committee (used with permission)
 
+## NOTICE: The AWS instance(s) have been shut down. The bucket contents have been moved to Backblaze and may be iterated beyond the version in the repository. The API may or may not be restored elsewhere. 
+Backblaze B2 Bucket endpoint: https://f002.backblazeb2.com/file/dranishnikov-website/index.html
+
 # API documentation:
 
 The API provides a basic subscription management service to all users. 
